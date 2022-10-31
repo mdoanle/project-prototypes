@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Chart from './chart';
+import LineChart from './chart';
 
 class App extends Component {
   render() {
-    return <Chart />;
+    return <LineChart />;
   }
 }
 export default App;
