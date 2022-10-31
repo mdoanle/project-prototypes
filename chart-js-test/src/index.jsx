@@ -1,9 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './app';
 
-import ReactDOM from 'react-dom';
-import App from './linechart';
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+const container = document.querySelector('#id');
+const root = ReactDOM.createRoot(container);
+root.render(<App/>);
