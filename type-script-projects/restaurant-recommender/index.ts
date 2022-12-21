@@ -3,6 +3,7 @@ import restaurants from './restaurants';
 const dollarSigns = '$$';
 const deliveryTimeMax = '90';
 const maxDistance = 10;
+const hour: number = new Date().getHours();
 let result: string;
 
 const priceBracket: number = dollarSigns.length;
@@ -17,6 +18,10 @@ const filteredRestaurants = restaurants.filter((restaurant) => {
   }
 
   if (Number(restaurant.distance) > maxDistance) {
+    return false;
+  }
+
+  if (Number(restaurant.closeHour) < hour || Number(restaurant.openHour) > hour) {
     return false;
   }
 
